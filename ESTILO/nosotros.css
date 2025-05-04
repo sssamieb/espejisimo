@@ -1,0 +1,425 @@
+body {
+	background-color: white;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif !important;
+}
+
+header {
+  background-color: #545454;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+header a {
+  flex-shrink: 0; 
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+    color: #d9d9d9;
+    font-weight: bold;
+    text-decoration: none;
+}
+  
+.login img {
+    height: 30px;
+    width: auto;
+}
+  
+#usuarioNombre {
+    font-size: 15px;
+    color: #d9d9d9;
+}
+
+
+.logo {
+  margin-right: auto;
+}
+
+.logo img {
+  height: 70px;
+}
+
+.traducir img {
+  height: 35px;
+  width: auto;
+}
+
+.agrandar img{
+  height: 35px;
+  margin-right: 4px;
+}
+
+body.modo-grande {
+  font-size: 20px;
+}
+
+body.modo-grande header .agrandar img {
+  content: url("../../IMAGENES/INDEX/HEADER/normal.png");
+}
+
+.lector-button {
+  position: fixed;
+  bottom: 150px;
+  right: 30px;
+  z-index: 1000;
+  background-color: #adadad;
+  border-radius: 50%;
+  padding: 4px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.lector-button img {
+  width: 30px;
+}
+
+nav#menu{
+	background-color: #d9d9d9;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 0px 0px;
+}
+nav#menu a:hover 
+{
+	background-color:#545454;
+	margin-left: 15px;
+	margin-right: 15px;	
+}
+
+nav ul {
+	background-color: #d9d9d9;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+	background-color: #d9d9d9;
+    margin-left: 15px;
+	margin-right: 15px;    
+}
+
+nav li:hover {
+	background-color: #545454;  
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    padding: 8px 0;             
+    display: inline-block;  
+}
+
+nav a:hover {
+    color: white; 
+}
+
+
+footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    margin-top: 0px;
+}
+
+#wsplink {
+    text-decoration: none;
+    color: white;
+}
+.nosotros-titulos h4,
+.nosotros-titulos h2,
+.nosotros-titulos h5 {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.nosotros-titulos h4 {
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  color: #888;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.nosotros-titulos h2 {
+  font-size: 3em;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+
+.responsive-section {
+  padding: 0px;
+  background-color: white;
+}
+
+.responsive-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+  gap: 30px;
+}
+
+.image-section {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-section img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+}
+
+.text-section {
+  flex: 1 1 400px;
+  max-width: 600px;
+  text-align: left;
+}
+
+.text-section p {
+  font-size: 0.9em;
+  line-height: 1.4; 
+  color: black;
+  margin-bottom: 10px; 
+}
+
+/*carrito*/
+.cart-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  visibility: hidden; 
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease;
+}
+
+.cart-modal.activo {
+  visibility: visible;
+  opacity: 1;
+}
+
+.cart-modal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cerrar-carrito {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+#cart-items {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-height: 300px;
+  overflow-y: auto; 
+}
+
+.carrito-item {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  gap: 10px;
+}
+
+.carrito-imagen {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.carrito-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.eliminar-item {
+  border: none;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.cart-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pagar-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.pagar-btn {
+  background-color: black;
+  color: white;
+}
+
+.boton-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: black;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+.boton-whatsapp:hover {
+  transform: scale(1.1);
+}
+
+/*chat*/
+.chatbot-button {
+  position: fixed;
+  bottom: 90px;
+  right: 25px;
+  z-index: 1000;
+  background-color: #545454;
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.chatbot-button img {
+  width: 40px;
+}
+
+.chatbox {
+  position: fixed;
+  bottom: 90px;
+  right: 80px;
+  width: 320px;
+  background-color: #eee;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 999;
+  
+}
+
+.chatbox-header {
+  background-color: #444;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-weight: bold;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.chatbox-header img {
+  width: 20px;
+  margin-right: 8px;
+}
+
+.close-chat {
+  margin-left: auto;
+  cursor: pointer;
+  color: #bbb;
+}
+
+.close-chat:hover {
+  color: #fff;
+}
+
+.chatbox-messages {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.bot-message, .user-message {
+  max-width: 80%;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.bot-message {
+  background-color: white;
+  align-self: flex-start;
+}
+
+.user-message {
+  background-color: #ddd;
+  align-self: flex-end;
+}
+
+.chatbox-options {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: transparent;
+  flex-wrap: wrap;
+}
+
+.chatbox-options button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.chatbox-options button:hover {
+  background-color: #333;
+}
