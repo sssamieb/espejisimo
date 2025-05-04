@@ -1,0 +1,146 @@
+<html>
+	<head>
+		<title>Espejisimo</title>
+		<script src="../../JAVASCRIPS/script2.js"></script>
+		<link rel="stylesheet" href="../../ESTILO/manual.css">
+	</head>
+	<body>
+		<header>
+			<a href="indexi.html" class="logo"><img src="../../IMAGENES/INDEX/HEADER/logo.png" alt='Logo de la empresa'></a>
+			<a href="logini.html" class="login" id="logoutBtn">
+				<img src="../../IMAGENES/INDEX/HEADER/login.png" alt="login">
+				<span id="usuarioNombre"></span>
+ 			</a>
+			<div class="cart-icon" onclick="abrirCarrito()">
+				<img src="../../IMAGENES/INDEX/HEADER/carrito.png" alt="Carrito de compras" style="width: 35px; cursor: pointer;">
+			</div>
+			<a href="#" class="agrandar" onclick="alternarModo()">
+				<img src="../../IMAGENES/INDEX/HEADER/agrandar.png" alt="Agrandar">
+			</a>
+			<a href="../ESP/manual.html" class="traducir"><img src="../../IMAGENES/INDEX/HEADER/eng.png" alt='traductor'></a>
+		</header>
+		<nav id="menu">
+			<ul>
+				<li><a href="catalogoi.html">Catalog</a></li>
+				<li><a href="ofertasi.html">Offers</a></li>
+				<li><a href="nosotrosi.html">About Us</a></li>
+				<li><a href="resenasi.html">Reviews</a></li>
+				<li><a href="faqi.html">FAQ</a></li>
+				<li><a href="manuali.html">Manual</a></li>
+			</ul>
+		</nav>
+
+		<section class="manual-wrapper">
+
+			<div class="manual-item">
+	  			<div class="manual-image">
+					<img src="../../IMAGENES/MANUAL/index.PNG" alt="Captura 1">
+	  			</div>
+	  			<div class="manual-info" align="center">
+					<h2>INDEX</h2>
+					<p>This is our main page, here you’ll find our featured products, location, social media, and your chance to try augmented reality with our products.</p>
+					<a href="indexi.html" class="manual-btn">➤ Go to the Main Page</a>
+	  			</div>
+			</div>
+  
+			<div class="manual-item">
+				<div class="manual-info" align="center">
+					<h2>LOG IN</h2>
+					<p>Want access to our offers? On this page you can log in with your account or create one. You’ll need an account to add items to the cart and check out the special deals we have for you.</p>
+					<a href="logini.html" class="manual-btn">➤ Log In</a>
+				</div>
+	 			<div class="manual-image">
+					<img src="../../IMAGENES/MANUAL/login.PNG" alt="Captura 2">
+	    		</div>  
+			</div>
+
+			<div class="manual-item">
+				<div class="manual-image">
+		  			<img src="../../IMAGENES/MANUAL/catalogo.PNG" alt="Captura 3">
+				</div>
+				<div class="manual-info" align="center">
+		  			<h2>CATALOG</h2>
+		  			<p>Here you can see all our available products.</p>
+		  			<a href="catalogoi.html" class="manual-btn">➤ Go to Catalog</a>
+				</div>
+	  		</div>
+
+			<div class="manual-item">
+				<div class="manual-info" align="center">
+					<h2>ABOUT US</h2>
+					<p>Learn more about who we are.</p>
+					<a href="nosotrosi.html" class="manual-btn">➤ Go to About Us</a>
+				</div>
+	 			<div class="manual-image">
+					<img src="../../IMAGENES/MANUAL/nosotros.PNG" alt="Captura 4">
+	   			</div>  
+			</div>
+
+			<div class="manual-item">
+				<div class="manual-image">
+		 		 <img src="../../IMAGENES/MANUAL/resenas.PNG" alt="Captura 3">
+				</div>
+				<div class="manual-info" align="center">
+		  			<h2>REVIEWS</h2>
+		  			<p>See what our customers said about products you might be interested in. And if you have an account with us, feel free to leave your opinion about your purchase.</p>
+		  			<a href="resenasi.html" class="manual-btn">➤ Go to Reviews</a>
+				</div>
+	  		</div>
+	  
+			<div class="manual-item">
+				<div class="manual-info" align="center">
+					<h2>FREQUENTLY ASKED QUESTIONS</h2>
+					<p>Questions the chatbot couldn't answer? In this section, you'll find answers to those doubts.</p>
+					<a href="faqi.html" class="manual-btn">➤ Go to Frequently Asked Questions</a>
+				</div>
+	 			<div class="manual-image">
+					<img src="../../IMAGENES/MANUAL/preguntas.PNG" alt="Captura 4">
+	    		</div>  
+			</div>
+  		</section>
+  
+		<!--Carrito-->
+		<div id="cart-modal" class="cart-modal">
+    		<div class="cart-modal-content">
+      			<span class="cerrar-carrito" onclick="cerrarCarrito()">✖️</span>
+      			<h2>Your Cart</h2>
+			  <div id="cart-items"></div>
+			  <p id="total-price">Total: 0 Bs.</p>
+			  <div class="cart-buttons">
+				<button class="pagar-btn" onclick="finalizarCompra()">Checkout</button>
+      			</div>
+    		</div>
+  		</div>
+		<!-- Botón de lector de texto -->
+  		<div class="lector-button" onclick="leerTextoPagina()">
+			<img src="../../IMAGENES/tts.png" alt="Lector" />
+		</div>
+		<!-- Boton para chatbox-->
+		<div class="chatbot-button" onclick="toggleChatbox()">
+			<img src="../../IMAGENES/bot.png" alt="Chat">
+  		</div>
+  
+  		<div class="chatbox" id="chatbox">
+			<div class="chatbox-header">
+	  			<img src="../../IMAGENES/boticon.png" alt="Bot">
+	  			<span>ChatBot</span>
+	  			<div class="close-chat" onclick="toggleChatbox()">✖</div>
+			</div>
+  
+			<div class="chatbox-messages" id="chatbox-messages"></div>
+  
+			<div class="chatbox-options" id="chatbox-buttons"></div>
+  		</div>
+		<!-- Botón de WhatsApp -->
+  		<a href="https://wa.me/59160883366?text=¡Hola!%20Estoy%20interesado%20en%20sus%20productos." class="boton-whatsapp" target="_blank">
+    		<img src="../../IMAGENES/whats.png" alt="WhatsApp" style="width: 40px;">
+  		</a>
+
+		<footer>
+			<p>&copy; 2025 Espejisimo.  All rights reserved.</p>
+			<p>📍 Location: Santa Cruz de la Sierra, Bolivia</p>
+			<p>📞 Tel: <a id="wsplink" href="https://wa.me/message/LP3YDWZJ7E2IF1">+591 60883366</a> | ✉️ espejisimo@gmail.com</p>
+		</footer>
+
+	</body>
+</html>

@@ -1,0 +1,110 @@
+<html>
+	<head>
+		<title>Espejisimo</title>
+		<script src="../../JAVASCRIPS/script2.js"></script>
+		<link rel="stylesheet" href="../../ESTILO/resenas.css">
+	</head>
+	<body>
+		<header>
+      <a href="indexi.html" class="logo"><img src="../../IMAGENES/INDEX/HEADER/logo.png" alt='Logo de la empresa'></a>
+      <a href="logini.html" class="login" id="logoutBtn">
+				<img src="../../IMAGENES/INDEX/HEADER/login.png" alt="login">
+				<span id="usuarioNombre"></span>
+ 			</a>
+      <div class="cart-icon" onclick="abrirCarrito()">
+        <img src="../../IMAGENES/INDEX/HEADER/carrito.png" alt="Carrito de compras" style="width: 35px; cursor: pointer;">
+      </div>
+      <a href="#" class="agrandar" onclick="alternarModo()">
+        <img src="../../IMAGENES/INDEX/HEADER/agrandar.png" alt="Agrandar">
+      </a>
+      <a href="../ESP/resenas.html" class="traducir"><img src="../../IMAGENES/INDEX/HEADER/eng.png" alt='traductor'></a>
+		</header>
+		<nav id="menu">
+      <ul>
+				<li><a href="catalogoi.html">Catalog</a></li>
+				<li><a href="ofertasi.html">Offers</a></li>
+				<li><a href="nosotrosi.html">About Us</a></li>
+				<li><a href="resenasi.html">Reviews</a></li>
+				<li><a href="faqi.html">FAQ</a></li>
+				<li><a href="manuali.html">Manual</a></li>
+      </ul>
+    </nav>
+
+    <div class="reviews-container">
+      <h2>Product Reviews</h2>
+      <!-- Formulario para reseñas (solo si está logueado) -->
+      <div id="review-form-container" class="review-form" style="display: none;">
+        <h3>Write your review</h3>
+      
+        <input type="text" id="product-name" placeholder="Product name" required>
+      
+        <div class="rating-container">
+          <label>Your rating:</label>
+          <div class="rate" id="rating-stars">
+            <input type="radio" id="star5" name="rate" value="5" />
+            <label for="star5" title="5 estrellas">5 stars</label>
+            <input type="radio" id="star4" name="rate" value="4" />
+            <label for="star4" title="4 estrellas">4 stars</label>
+            <input type="radio" id="star3" name="rate" value="3" />
+            <label for="star3" title="3 estrellas">3 stars</label>
+            <input type="radio" id="star2" name="rate" value="2" />
+            <label for="star2" title="2 estrellas">2 stars</label>
+            <input type="radio" id="star1" name="rate" value="1" />
+            <label for="star1" title="1 estrella">1 star</label>
+          </div>
+        </div>
+      
+        <textarea id="comment" placeholder="Your comment" required></textarea>
+      
+        <center><button onclick="submitReview()">Send</button></center>
+      </div>
+      
+      <!-- Contenedor de reseñas -->
+      <div id="reviews-list" class="reviews-list"></div>
+    </div>
+    <!--btn de carrito-->
+    <div id="cart-modal" class="cart-modal">
+			<div class="cart-modal-content">
+			  <span class="cerrar-carrito" onclick="cerrarCarrito()">✖️</span>
+			  <h2>Your Cart</h2>
+			  <div id="cart-items"></div>
+			  <p id="total-price">Total: 0 Bs.</p>
+			  <div class="cart-buttons">
+				<button class="pagar-btn" onclick="finalizarCompra()">Checkout</button>
+			  </div>
+		  </div>
+		</div>
+    <!-- Botón de lector de texto -->
+    <div class="lector-button" onclick="leerTextoPagina()">
+        <img src="../../IMAGENES/tts.png" alt="Lector" />
+    </div>
+    <!-- Boton para chatbox-->
+		<div class="chatbot-button" onclick="toggleChatbox()">
+			<img src="../../IMAGENES/bot.png" alt="Chat">
+		</div>
+		  
+		<div class="chatbox" id="chatbox">
+		  <div class="chatbox-header">
+			  <img src="../../IMAGENES/boticon.png" alt="Bot">
+			  <span>ChatBot</span>
+			  <div class="close-chat" onclick="toggleChatbox()">✖</div>
+			</div>
+		  
+		  <div class="chatbox-messages" id="chatbox-messages"></div>
+		  
+		  <div class="chatbox-options" id="chatbox-buttons"></div>
+		</div>
+    <!-- Botón de WhatsApp -->
+    <a href="https://wa.me/59160883366?text=¡Hola!%20Estoy%20interesado%20en%20sus%20productos." class="boton-whatsapp" target="_blank">
+      <img src="../../IMAGENES/whats.png" alt="WhatsApp" style="width: 40px;">
+    </a>
+    <footer>
+      <p>&copy; 2025 Espejisimo.  All rights reserved.</p>
+			<p>📍 Location: Santa Cruz de la Sierra, Bolivia</p>
+      <p>📞 Tel: <a id="wsplink" href="https://wa.me/message/LP3YDWZJ7E2IF1">+591 60883366</a> | ✉️ espejisimo@gmail.com</p>
+    </footer>
+   
+
+ 
+  </body>
+</html>

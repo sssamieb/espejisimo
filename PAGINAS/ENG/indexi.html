@@ -1,0 +1,194 @@
+<html>
+	<head>
+		<title>Espejisimo</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="../../ESTILO/index.css">
+		<script src="../../JAVASCRIPS/script2.js"></script>
+	</head>
+	<body onload="camara()">
+		<header>
+			<a href="indexi.html" class="logo"><img src="../../IMAGENES/INDEX/HEADER/logo.png" alt='Logo de la empresa'></a>
+			<a href="logini.html" class="login" id="logoutBtn">
+				<img src="../../IMAGENES/INDEX/HEADER/login.png" alt="login">
+				<span id="usuarioNombre"></span>
+ 			</a>
+			<div class="cart-icon" onclick="abrirCarrito()">
+				<img src="../../IMAGENES/INDEX/HEADER/carrito.png" alt="Carrito de compras" style="width: 35px; cursor: pointer;">
+			</div>
+			<a href="#" class="agrandar" onclick="alternarModo()">
+				<img src="../../IMAGENES/INDEX/HEADER/agrandar.png" alt="Agrandar">
+			  </a>			
+			<a href="../../index.html" class="traducir"><img src="../../IMAGENES/INDEX/HEADER/eng.png" alt='traductor'></a>
+		</header>
+		<nav id="menu">
+			<ul>
+				<li><a href="catalogoi.html">Catalog</a></li>
+				<li><a href="ofertasi.html">Offers</a></li>
+				<li><a href="nosotrosi.html">About Us</a></li>
+				<li><a href="resenasi.html">Reviews</a></li>
+				<li><a href="faqi.html">FAQ</a></li>
+				<li><a href="manuali.html">Manual</a></li>
+			</ul>
+		</nav>
+		<marquee scrollamount=15>FREE SHIPPING ON PURCHASES OVER 200 BS.</marquee>
+		<!-- Carrusel -->
+		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img class="d-block w-100" src="../../IMAGENES/INDEX/SLIDES/slide.png" alt="First slide">
+				</div>
+				<div class="carousel-item">
+					<img class="d-block w-100" src="../../IMAGENES/INDEX/SLIDES/slide2.jpg" alt="Second slide">
+				</div>
+				<div class="carousel-item">
+					<img class="d-block w-100" src="../../IMAGENES/INDEX/SLIDES/slide3.jpg" alt="Third slide">
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+		<br><br>
+		<!--Cajas que llevan al catalogo-->
+		<h3 id="titulo">FEATURED PRODUCTS</h3>
+		<div class="containerone">
+			<div class="cajas destacada" data-categoria="muebles">
+			  <h4>Furniture</h4>
+			  <img src="../../IMAGENES/INDEX/DESTACADO/muebles.jpg" alt="foto muebles">
+			  <p>Mirrored furniture that reflects your home's perfection...</p>
+			</div>
+			<div class="cajas destacada" data-categoria="bandejas">
+			  <h4>Trays</h4>
+			  <img src="../../IMAGENES/INDEX/DESTACADO/bandejas.jpg" alt="bandejas">
+			  <p>Mirrored trays that highlight the center of your home...</p>
+			</div>
+			<div class="cajas destacada" data-categoria="floreros">
+			  <h4>Flower Vases</h4>
+			  <img src="../../IMAGENES/INDEX/DESTACADO/floreros.jpg" alt="floreros">
+			  <p>Mirrored flower vases that bring more life to your home...</p>
+			</div>
+		  </div>
+		<div id="contenedor">
+		<section><!--Mapa de Google -->
+			<article>
+				<h3 id="sede-central" class="google">Main Branch:</h3>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2259.7535480766624!2d-63.157041480810086!3d-17.72402198496243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93f1e91aa5898057%3A0xf7c1764118fb763d!2sEspejisimo!5e0!3m2!1ses-419!2sbo!4v1746197029863!5m2!1ses-419!2sbo" width="741" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				<h3 id="segunda-sucursal" class="google">Second Branch:</h3>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.151199895758!2d-63.189132099999966!3d-17.737513499999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93f1e91187834565%3A0x6ed5d1c0ab402129!2sEspejisimo!5e0!3m2!1ses-419!2sbo!4v1746147496223!5m2!1ses-419!2sbo" width="741" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</article>
+		</section>
+		<aside align=center> <!--Redes Sociales del Aside -->
+			<p><h4>Follow us on our social media</h4></p>
+			<ul id="iconos">
+				<li><a href="https://www.facebook.com/espejisimo" target=blank>
+					<img src="../../IMAGENES/INDEX/REDESSOCIALES/facebooklogo.png" width=50 height=50>
+				</a>
+				<li><a href="https://www.instagram.com/espejisimo.sc/" target=blank>
+					<img src="../../IMAGENES/INDEX/REDESSOCIALES/instalogo.png" width=50 height=50>
+				</a>
+				<li><a href="https://www.tiktok.com/@espejisimo" target=blank>
+					<img src="../../IMAGENES/INDEX/REDESSOCIALES/tiktoklogo.png" width=50 height=50>
+				</a>
+			</ul>
+			<!-- Realidad Aumentada -->
+			<p><h4>Try our products in your home virtually</h4></p>
+			<div style="position: relative; width: 360px; height: 600px; margin: 0 auto;">
+    			<video id="camara" autoplay playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>
+    			<canvas id="canvas3d" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: auto;"></canvas>
+   				<div class="control-buttons" style="position: absolute; top: 10px; left: 10px; z-index: 2;">
+       				 <button id="btn-agrandar">➕</button>
+      				  <button id="btn-reducir">➖</button>
+						<button id="btn-rotar">Rotate</button>
+    			</div>
+				<div class="control-buttons ambiente-button" style="position: absolute; top: 10px; right: 10px; z-index: 2;">
+					<button id="btn-ambiente">Environment</button>
+				</div>				
+			</div>
+
+			<div class="mueble-buttons">
+				<button class="mueble-btn" data-model="../../MODELOS3D/mesa1.glb">
+					<img src="../../IMAGENES/INDEX/BOTONES3D/mueble.jpg" width="50" height="50">
+				</button>
+				<button class="mueble-btn" data-model="../../MODELOS3D/bandeja.glb">
+					<img src="../../IMAGENES/INDEX/BOTONES3D/bandeja.jpg" width="50" height="50">
+				</button>
+				<button class="mueble-btn" data-model="../../MODELOS3D/flor.glb">
+					<img src="../../IMAGENES/INDEX/BOTONES3D/florero.jpg" width="50" height="50">
+				</button>
+				<button class="mueble-btn" data-model="../../MODELOS3D/espejo.glb">
+					<img src="../../IMAGENES/INDEX/BOTONES3D/espejo.jpg" width="50" height="50">
+				</button>
+			</div>
+		</aside>
+		</div>
+		<!-- Modal del carrito de compras -->
+		<div id="cart-modal" class="cart-modal">
+			<div class="cart-modal-content">
+			  <span class="cerrar-carrito" onclick="cerrarCarrito()">✖️</span>
+			  <h2>Your Cart</h2>
+			  <div id="cart-items"></div>
+			  <p id="total-price">Total: 0 Bs.</p>
+			  <div class="cart-buttons">
+				<button class="pagar-btn" onclick="finalizarCompra()">Checkout</button>
+			  </div>
+			</div>
+		  </div>	
+
+
+		<div class="lector-button" onclick="leerTextoPagina()">
+			<img src="../../IMAGENES/tts.png" alt="Lector" />
+		</div>
+		<!-- Boton para chatbox-->
+		<div class="chatbot-button" onclick="toggleChatbox()">
+			<img src="../../IMAGENES/bot.png" alt="Chat">
+		  </div>
+		  
+		  <div class="chatbox" id="chatbox">
+			<div class="chatbox-header">
+			  <img src="../../IMAGENES/boticon.png" alt="Bot">
+			  <span>ChatBot</span>
+			  <div class="close-chat" onclick="toggleChatbox()">✖</div>
+			</div>
+		  
+			<div class="chatbox-messages" id="chatbox-messages"></div>
+		  
+			<div class="chatbox-options" id="chatbox-buttons"></div>
+		  </div>
+		  
+		  
+		  
+		<!-- Botón de WhatsApp -->
+		<a href="https://wa.me/59160883366?text=¡Hola!%20Estoy%20interesado%20en%20sus%20productos." class="boton-whatsapp" target="_blank">
+			<img src="../../IMAGENES/whats.png" alt="WhatsApp" style="width: 40px;">
+		</a>
+		  
+		<footer>
+			<p>&copy; 2025 Espejisimo.  All rights reserved.</p>
+			<p>📍 Location: Santa Cruz de la Sierra, Bolivia</p>
+			<p>📞 Tel: <a id="wsplink" href="https://wa.me/message/LP3YDWZJ7E2IF1">+591 60883366</a> | ✉️ espejisimo@gmail.com</p>
+		</footer>
+
+
+
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLTFLoader.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/DragControls.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/RGBELoader.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/utils/BufferGeometryUtils.js"></script>
+
+
+	</body>
+</html>

@@ -1,0 +1,206 @@
+<html>
+	<head>
+		<title>Espejisimo</title>
+		<script src="../../JAVASCRIPS/script2.js"></script>
+		<link rel="stylesheet" href="../../ESTILO/faq.css">
+	</head>
+	<body>
+		<header>
+      <a href="indexi.html" class="logo"><img src="../../IMAGENES/INDEX/HEADER/logo.png" alt='Logo de la empresa'></a>
+      <a href="logini.html" class="login" id="logoutBtn">
+				<img src="../../IMAGENES/INDEX/HEADER/login.png" alt="login">
+				<span id="usuarioNombre"></span>
+ 			</a>
+      <div class="cart-icon" onclick="abrirCarrito()">
+        <img src="../../IMAGENES/INDEX/HEADER/carrito.png" alt="Carrito de compras" style="width: 35px; cursor: pointer;">
+      </div>
+      <a href="#" class="agrandar" onclick="alternarModo()">
+        <img src="../../IMAGENES/INDEX/HEADER/agrandar.png" alt="Agrandar">
+      </a>
+      <a href="../ESP/faq.html" class="traducir"><img src="../../IMAGENES/INDEX/HEADER/eng.png" alt='traductor'></a>
+		</header>
+		<nav id="menu">
+      <ul>
+				<li><a href="catalogoi.html">Catalog</a></li>
+				<li><a href="ofertasi.html">Offers</a></li>
+				<li><a href="nosotrosi.html">About Us</a></li>
+				<li><a href="resenasi.html">Reviews</a></li>
+				<li><a href="faqi.html">FAQ</a></li>
+				<li><a href="manuali.html">Manual</a></li>
+      </ul>
+    </nav>
+    <section class="faq-container">
+      <h1>Frequently Asked Questions</h1>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Do you make custom furniture or mirrors upon request?
+        </div>
+        <div class="faq-answer">
+          No, we do not make custom furniture or mirrors upon request. However, we offer a variety of products that may suit your needs.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+        Do you make furniture or mirrors with custom measurements?
+        </div>
+        <div class="faq-answer">
+          Yes, we make custom-sized furniture or mirrors only for our available catalog products. You can contact us for more information about available options.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          What are the prices and dimensions of the products?
+        </div>
+        <div class="faq-answer">
+          The prices and dimensions of our products vary depending on the model and specifications. You can check our online catalog for detailed information about each product.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          What materials are the products made of?
+        </div>
+        <div class="faq-answer">
+         Our products are made from a variety of materials, including melamine, MDF, mirrored glass, and others. Each product includes a detailed description of the materials used in its manufacture.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Do your products come with a warranty?
+        </div>
+        <div class="faq-answer">
+          No, we do not offer a warranty on our products. However, we ensure that all our products are high quality and meet manufacturing standards. Additionally, upon purchase, you will receive <a href="../../DESCARGAS/guia.pdf">our care and maintenance guide</a> to extend the lifespan of your product.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+         Do you offer home delivery?
+        </div>
+        <div class="faq-answer">
+          Yes, we offer home delivery in the city of Santa Cruz de la Sierra. Delivery costs and times vary by location, but if you are within the 1st to 4th ring, delivery is free with purchases over 200 Bs.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Do you ship nationwide?
+        </div>
+        <div class="faq-answer">
+          Yes, we ship nationwide via ground transportation. We work with trusted transport companies like Copacabana and ElMexicano, but we can also ship through your preferred shipping company.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Is installation included with the purchase?
+        </div>
+        <div class="faq-answer">
+          Yes, we offer nationwide delivery. Check delivery costs and times in our shipping section.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Are the products suitable for bathrooms?
+        </div>
+        <div class="faq-answer">
+          Yes, but the mirror must be cleaned after each shower use, as humidity in a closed space can be corrosive to any material. <a href="../../DESCARGAS/guia.pdf">Click here to download our care guide.</a>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Can I buy on credit?
+        </div>
+        <div class="faq-answer">
+          No, we currently only accept full payments, but we are working on offering credit options soon.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Do you have a physical store?
+        </div>
+        <div class="faq-answer">
+          Yes, we have two branches with unique products at each location. You can contact us to schedule a visit to any of our stores.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Do you offer repairs for your products?
+        </div>
+        <div class="faq-answer">
+          We only offer repairs for our own products, and an additional cost applies.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          What industry are you in?
+        </div>
+        <div class="faq-answer">
+          All our products are imported from Argentina and Brazil.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Are you a glass shop?
+        </div>
+        <div class="faq-answer">
+          No, we are a distributor of mirrored products to beautify your home.
+        </div>
+      </div>
+
+    </section>
+    <!-- Boton para carrito de compras -->
+    <div id="cart-modal" class="cart-modal">
+      <div class="cart-modal-content">
+        <span class="cerrar-carrito" onclick="cerrarCarrito()">✖️</span>
+        <h2>Your Cart</h2>
+			  <div id="cart-items"></div>
+			  <p id="total-price">Total: 0 Bs.</p>
+			  <div class="cart-buttons">
+				<button class="pagar-btn" onclick="finalizarCompra()">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Botón de lector de texto -->
+    <div class="lector-button" onclick="leerTextoPagina()">
+      <img src="../../IMAGENES/tts.png" alt="Lector" />
+    </div>
+    <!-- Boton para chatbox-->
+    <div class="chatbot-button" onclick="toggleChatbox()">
+      <img src="../../IMAGENES/bot.png" alt="Chat">
+    </div>
+    
+    <div class="chatbox" id="chatbox">
+      <div class="chatbox-header">
+        <img src="../../IMAGENES/boticon.png" alt="Bot">
+        <span>ChatBot</span>
+        <div class="close-chat" onclick="toggleChatbox()">✖</div>
+      </div>
+    
+      <div class="chatbox-messages" id="chatbox-messages"></div>
+    
+      <div class="chatbox-options" id="chatbox-buttons"></div>
+    </div>
+    <!-- Botón de WhatsApp -->
+    <a href="https://wa.me/59160883366?text=¡Hola!%20Estoy%20interesado%20en%20sus%20productos." class="boton-whatsapp" target="_blank">
+      <img src="../../IMAGENES/whats.png" alt="WhatsApp" style="width: 40px;">
+    </a>
+    <footer>
+      <p>&copy; 2025 Espejisimo.  All rights reserved.</p>
+			<p>📍 Location: Santa Cruz de la Sierra, Bolivia</p>
+      <p>📞 Tel: <a id="wsplink" href="https://wa.me/message/LP3YDWZJ7E2IF1">+591 60883366</a> | ✉️ espejisimo@gmail.com</p>
+    </footer>
+
+  </body>
+</html>
