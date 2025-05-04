@@ -1,0 +1,146 @@
+<html>
+	<head>
+		<title>Espejisimo</title>
+		<script src="../../JAVASCRIPS/script1.js"></script>
+		<link rel="stylesheet" href="../../ESTILO/manual.css">
+	</head>
+	<body>
+		<header>
+			<a href="../../index.html" class="logo"><img src="../../IMAGENES/INDEX/HEADER/logo.png" alt='Logo de la empresa'></a>
+			<a href="/PAGINAS/ESP/login.html" class="login" id="logoutBtn">
+				<img src="../../IMAGENES/INDEX/HEADER/login.png" alt="login">
+				<span id="usuarioNombre"></span>
+ 			</a>
+			<div class="cart-icon" onclick="abrirCarrito()">
+				<img src="../../IMAGENES/INDEX/HEADER/carrito.png" alt="Carrito de compras" style="width: 35px; cursor: pointer;">
+			</div>
+			<a href="#" class="agrandar" onclick="alternarModo()">
+				<img src="../../IMAGENES/INDEX/HEADER/agrandar.png" alt="Agrandar">
+			</a>
+			<a href="../ENG/manuali.html" class="traducir"><img src="../../IMAGENES/INDEX/HEADER/esp.png" alt='traductor'></a>
+		</header>
+		<nav id="menu">
+			<ul>
+				<li><a href="catalogo.html">Catalogo</a></li>
+				<li><a href="ofertas.html">Ofertas</a></li>
+				<li><a href="nosotros.html">Nosotros</a></li>
+				<li><a href="resenas.html">Reseñas</a></li>
+				<li><a href="faq.html">Preguntas Frecuentes</a></li>
+				<li><a href="manual.html">Manual</a></li>
+			</ul>
+		</nav>
+
+		<section class="manual-wrapper">
+
+			<div class="manual-item">
+	  			<div class="manual-image">
+					<img src="../../IMAGENES/MANUAL/index.PNG" alt="Captura 1">
+	  			</div>
+	  			<div class="manual-info" align="center">
+					<h2>INDEX</h2>
+					<p>Esta es nuestra página principal, aquí están nuestros productos destacados, ubicación, redes sociales y tu oportunidad de probar la realidad aumentada con nuestros productos.</p>
+					<a href="../../index.html" class="manual-btn">➤ Ir a la Página Principal</a>
+	  			</div>
+			</div>
+  
+			<div class="manual-item">
+				<div class="manual-info" align="center">
+					<h2>INICIA SESIÓN</h2>
+					<p>¿Quieres acceder a nuestras ofertas? En esta página puedes iniciar sesión con tu cuenta o crearte una, necesitarás una para agregar cosas al carrito y para echarle un vistazo las ofertas que tenemos preparadas para ti.</p>
+					<a href="login.html" class="manual-btn">➤ Iniciar Sesión</a>
+				</div>
+	 			<div class="manual-image">
+					<img src="../../IMAGENES/MANUAL/login.PNG" alt="Captura 2">
+	    		</div>  
+			</div>
+
+			<div class="manual-item">
+				<div class="manual-image">
+		  			<img src="../../IMAGENES/MANUAL/catalogo.PNG" alt="Captura 3">
+				</div>
+				<div class="manual-info" align="center">
+		  			<h2>CATALOGO</h2>
+		  			<p>Aquí puedes ver todos nuestros productos disponibles.</p>
+		  			<a href="catalogo.html" class="manual-btn">➤ Ir al Catalogo</a>
+				</div>
+	  		</div>
+
+			<div class="manual-item">
+				<div class="manual-info" align="center">
+					<h2>NOSOTROS</h2>
+					<p>Descubre más sobre quienes somos nosotros.</p>
+					<a href="nosotros.html" class="manual-btn">➤ Ir a Nosotros</a>
+				</div>
+	 			<div class="manual-image">
+					<img src="../../IMAGENES/MANUAL/nosotros.PNG" alt="Captura 4">
+	   			</div>  
+			</div>
+
+			<div class="manual-item">
+				<div class="manual-image">
+		 		 <img src="../../IMAGENES/MANUAL/resenas.PNG" alt="Captura 3">
+				</div>
+				<div class="manual-info" align="center">
+		  			<h2>RESEÑAS</h2>
+		  			<p>Mira lo que dijeron nuestros clientes sobre productos que puedan interesarte. Y si tienes una cuenta con nosotros, no dudes en dejarnos tu opinión sobre tu compra.</p>
+		  			<a href="resenas.html" class="manual-btn">➤ Ir a las Reseñas</a>
+				</div>
+	  		</div>
+	  
+			<div class="manual-item">
+				<div class="manual-info" align="center">
+					<h2>PREGUNTAS FRECUENTES</h2>
+					<p>¿Dudas que el chatbot no pudo resolver? En esta sección puedes encontrar respuestas a esas preguntas.</p>
+					<a href="faq.html" class="manual-btn">➤ Ir a Preguntas Frecuentes</a>
+				</div>
+	 			<div class="manual-image">
+					<img src="../../IMAGENES/MANUAL/preguntas.PNG" alt="Captura 4">
+	    		</div>  
+			</div>
+  		</section>
+  
+		<!--Carrito-->
+		<div id="cart-modal" class="cart-modal">
+    		<div class="cart-modal-content">
+      			<span class="cerrar-carrito" onclick="cerrarCarrito()">✖️</span>
+      			<h2>Tu carrito</h2>
+      			<div id="cart-items"></div>
+      				<p id="total-price">Total: $0</p>
+      				<div class="cart-buttons">
+        			<button class="pagar-btn" onclick="finalizarCompra()">Pagar</button>
+      			</div>
+    		</div>
+  		</div>
+		<!-- Botón de lector de texto -->
+  		<div class="lector-button" onclick="leerTextoPagina()">
+			<img src="../../IMAGENES/tts.png" alt="Lector" />
+		</div>
+		<!-- Boton para chatbox-->
+		<div class="chatbot-button" onclick="toggleChatbox()">
+			<img src="../../IMAGENES/bot.png" alt="Chat">
+  		</div>
+  
+  		<div class="chatbox" id="chatbox">
+			<div class="chatbox-header">
+	  			<img src="../../IMAGENES/boticon.png" alt="Bot">
+	  			<span>ChatBot</span>
+	  			<div class="close-chat" onclick="toggleChatbox()">✖</div>
+			</div>
+  
+			<div class="chatbox-messages" id="chatbox-messages"></div>
+  
+			<div class="chatbox-options" id="chatbox-buttons"></div>
+  		</div>
+		<!-- Botón de WhatsApp -->
+  		<a href="https://wa.me/59160883366?text=¡Hola!%20Estoy%20interesado%20en%20sus%20productos." class="boton-whatsapp" target="_blank">
+    		<img src="../../IMAGENES/whats.png" alt="WhatsApp" style="width: 40px;">
+  		</a>
+
+		<footer>
+			<p>&copy; 2025 Espejisimo. Todos los derechos reservados.</p>
+			<p>📍 Ubicación: Santa Cruz de la Sierra, Bolivia</p>
+			<p>📞 Tel: <a id="wsplink" href="https://wa.me/message/LP3YDWZJ7E2IF1">+591 60883366</a> | ✉️ espejisimo@gmail.com</p>
+		</footer>
+
+	</body>
+</html>

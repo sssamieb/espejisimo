@@ -1,0 +1,205 @@
+<html>
+	<head>
+		<title>Espejisimo</title>
+		<script src="../../JAVASCRIPS/script1.js"></script>
+		<link rel="stylesheet" href="../../ESTILO/faq.css">
+	</head>
+	<body>
+		<header>
+      <a href="../../index.html" class="logo"><img src="../../IMAGENES/INDEX/HEADER/logo.png" alt='Logo de la empresa'></a>
+      <a href="/PAGINAS/ESP/login.html" class="login" id="logoutBtn">
+				<img src="../../IMAGENES/INDEX/HEADER/login.png" alt="login">
+				<span id="usuarioNombre"></span>
+ 			</a>
+      <div class="cart-icon" onclick="abrirCarrito()">
+        <img src="../../IMAGENES/INDEX/HEADER/carrito.png" alt="Carrito de compras" style="width: 35px; cursor: pointer;">
+      </div>
+      <a href="#" class="agrandar" onclick="alternarModo()">
+        <img src="../../IMAGENES/INDEX/HEADER/agrandar.png" alt="Agrandar">
+      </a>
+      <a href="../ENG/faqi.html" class="traducir"><img src="../../IMAGENES/INDEX/HEADER/esp.png" alt='traductor'></a>
+		</header>
+		<nav id="menu">
+      <ul>
+				<li><a href="catalogo.html">Catalogo</a></li>
+				<li><a href="ofertas.html">Ofertas</a></li>
+				<li><a href="nosotros.html">Nosotros</a></li>
+				<li><a href="resenas.html">Reseñas</a></li>
+				<li><a href="faq.html">Preguntas Frecuentes</a></li>
+        <li><a href="manual.html">Manual</a></li>
+      </ul>
+    </nav>
+    <section class="faq-container">
+      <h1>Preguntas Frecuentes</h1>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          ¿Se hace muebles o espejos personalizados a pedido?
+       </div>
+       <div class="faq-answer">
+          No, no hacemos muebles o espejos personalizados a pedido. Sin embargo, ofrecemos una variedad de productos que pueden adaptarse a tus necesidades.
+       </div>
+      </div>
+
+     <div class="faq-item">
+        <div class="faq-question">
+         ¿Se hace muebles o espejos a medidas personalizadas?
+        </div>
+        <div class="faq-answer">
+         Sí, realizamos muebles o espejos a medida unicamente para nuestros productos disponnibles en el catalogo. Puedes contactarnos para más información sobre las opciones disponibles.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          ¿Cuáles son los precios y medidas de los productos?
+        </div>
+        <div class="faq-answer">
+         Los precios y medidas de nuestros productos varían según el modelo y las especificaciones. Puedes consultar nuestro catálogo en línea para obtener información detallada sobre cada producto.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          ¿De qué materiales son los productos?
+       </div>
+        <div class="faq-answer">
+         Nuestros productos están hechos de una variedad de materiales, incluyendo melamina, MDF, vidrio espejo y otros. Cada producto tiene una descripción detallada de los materiales utilizados en su fabricación.
+       </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          ¿Tienen garantía?
+        </div>
+        <div class="faq-answer">
+          No, no ofrecemos garantía en nuestros productos. Sin embargo, nos aseguramos de que todos nuestros productos sean de alta calidad y cumplan con los estándares de fabricación. Además, al realizar una compra, recibirás <a href="../DESCARGAS/guia.pdf">nuestra guía de cuidado y mantenimiento</a> para prolongar la vida útil de tu producto.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          ¿Hacen delivery a domicilio?
+        </div>
+        <div class="faq-answer">
+         Sí, ofrecemos entrega a domicilio para la ciudad de Santa Cruz de la Sierra. Los costos y tiempos de entrega varían según la ubicación pero si estás entre el 1er y 4to anillo, el envío es gratis con tu compra mayor a 200 bs.
+       </div>
+      </div>
+
+     <div class="faq-item">
+        <div class="faq-question">
+          ¿Hacen envíos nacionales?
+        </div>
+        <div class="faq-answer">
+          Sí, realizamos envíos a todo el territorio nacional mediante transporte terrestre. Tenemos nuestras transportadoras de confianza como Copacabana o ElMexicano, pero podemos enviar los productos por medio de TU transportadora de confianza. 
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          ¿La compra incluye instalación?
+        </div>
+        <div class="faq-answer">
+         Sí, realizamos envíos a todo el territorio nacional. Consulta los costos y tiempos en nuestra sección de envíos.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          ¿Son aptos para el baño?
+        </div>
+        <div class="faq-answer">
+         Sí, pero debe de limpiar el espjo con cada uso de la ducha, ya que la humedad en un espacio cerrado es corrosivo para cualquier material. <a href="../DESCARGAS/guia.pdf">Click aquí para descargar nuestra guía de cuidados.</a>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+         ¿Se puede comprar a crédito?
+        </div>
+        <div class="faq-answer">
+          No, por el momento solo aceptamos pagos al contado, pero estamos trabajando para ofrecer nuestros productos a credito muy pronto.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+         ¿Tienen tienda física?
+       </div>
+        <div class="faq-answer">
+         Sí, contamos con dos surcursales con productos únicos en cada tienda. Puedes contactarnos para agendar tu cita en cualquiera de nuestras tiendas.
+        </div>
+     </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          ¿Hacen reparaciones a los productos?
+        </div>
+        <div class="faq-answer">
+          Realizamos reparaciones solamente a nuestros productos por un costo adicional.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+         ¿De qué industria son?
+       </div>
+        <div class="faq-answer">
+         Todos nuestros productos son importados de Argentina y Brasil.
+        </div>
+      </div>
+
+     <div class="faq-item">
+        <div class="faq-question">
+          ¿Son vidriería?
+        </div>
+        <div class="faq-answer">
+         No, somos una distribuidora de productos espejados para embellecer tu hogar.
+       </div>
+      </div>
+    </section>
+    <!-- Boton para carrito de compras -->
+    <div id="cart-modal" class="cart-modal">
+      <div class="cart-modal-content">
+        <span class="cerrar-carrito" onclick="cerrarCarrito()">✖️</span>
+        <h2>Tu carrito</h2>
+        <div id="cart-items"></div>
+          <p id="total-price">Total: $0</p>
+          <div class="cart-buttons">
+           <button class="pagar-btn" onclick="finalizarCompra()">Pagar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Botón de lector de texto -->
+    <div class="lector-button" onclick="leerTextoPagina()">
+      <img src="../../IMAGENES/tts.png" alt="Lector" />
+    </div>
+    <!-- Boton para chatbox-->
+    <div class="chatbot-button" onclick="toggleChatbox()">
+      <img src="../../IMAGENES/bot.png" alt="Chat">
+    </div>
+    
+    <div class="chatbox" id="chatbox">
+      <div class="chatbox-header">
+        <img src="../../IMAGENES/boticon.png" alt="Bot">
+        <span>ChatBot</span>
+        <div class="close-chat" onclick="toggleChatbox()">✖</div>
+      </div>
+    
+      <div class="chatbox-messages" id="chatbox-messages"></div>
+    
+      <div class="chatbox-options" id="chatbox-buttons"></div>
+    </div>
+    <!-- Botón de WhatsApp -->
+    <a href="https://wa.me/59160883366?text=¡Hola!%20Estoy%20interesado%20en%20sus%20productos." class="boton-whatsapp" target="_blank">
+      <img src="../../IMAGENES/whats.png" alt="WhatsApp" style="width: 40px;">
+    </a>
+    <footer>
+      <p>&copy; 2025 Espejisimo. Todos los derechos reservados.</p>
+      <p>📍 Ubicación: Santa Cruz de la Sierra, Bolivia</p>
+      <p>📞 Tel: <a id="wsplink" href="https://wa.me/message/LP3YDWZJ7E2IF1">+591 60883366</a> | ✉️ espejisimo@gmail.com</p>
+    </footer>
+
+  </body>
+</html>

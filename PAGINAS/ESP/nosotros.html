@@ -1,0 +1,115 @@
+<html>
+	<head>
+		<title>Espejisimo</title>
+		<script src="../../JAVASCRIPS/script1.js"></script>
+		<link rel="stylesheet" href="../../ESTILO/nosotros.css">
+	</head>
+	<body>
+		<header>
+			<a href="../../index.html" class="logo"><img src="../../IMAGENES/INDEX/HEADER/logo.png" alt='Logo de la empresa'></a>
+			<a href="/PAGINAS/ESP/login.html" class="login" id="logoutBtn">
+				<img src="../../IMAGENES/INDEX/HEADER/login.png" alt="login">
+				<span id="usuarioNombre"></span>
+ 			</a>
+			<div class="cart-icon" onclick="abrirCarrito()">
+				<img src="../../IMAGENES/INDEX/HEADER/carrito.png" alt="Carrito de compras" style="width: 35px; cursor: pointer;">
+			</div>
+			<a href="#" class="agrandar" onclick="alternarModo()">
+				<img src="../../IMAGENES/INDEX/HEADER/agrandar.png" alt="Agrandar">
+			</a>
+			<a href="../ENG/nosotrosi.html" class="traducir"><img src="../../IMAGENES/INDEX/HEADER/esp.png" alt='traductor'></a>
+		</header>
+		<nav id="menu">
+			<ul>
+				<li><a href="catalogo.html">Catalogo</a></li>
+				<li><a href="ofertas.html">Ofertas</a></li>
+				<li><a href="nosotros.html">Nosotros</a></li>
+				<li><a href="resenas.html">Reseñas</a></li>
+				<li><a href="faq.html">Preguntas Frecuentes</a></li>
+				<li><a href="manual.html">Manual</a></li>
+			</ul>
+		</nav>
+
+		<div class="container">
+			<div class="content">
+				<section class="about">
+					<article>
+						<div class="responsive-section">
+							<div class="responsive-content">
+							  <div class="image-section">
+								<img src="../../IMAGENES/NOSOTROS/lineas.png" alt="lineas plateadas">
+							  </div>
+							  <div class="text-section">
+								<div class="nosotros-titulos">
+									<h4>SOBRE NOSOTROS</h4>
+									<h2>ESPEJISIMO</h2>
+								</div>
+								  
+								<p>
+									Espejisimo nació en plena pandemia, cuando todo parecía incierto pero las ganas de crear
+									algo lindo seguían intactas. Empezamos de a poquito, con solo dos modelos de veladores
+									hechos a pedido, y una pequeña sucursal que nos llenaba de ilusión.</p>
+								<p>
+									Con el tiempo y el apoyo de quienes confiaron en nosotros desde el día uno, nos fuimos
+									expandiendo, creciendo paso a paso. Hoy, contamos con dos sucursales y una amplia variedad
+									de productos que reflejan nuestra esencia: espejos, mesas, bandejas, floreros, accesorios
+									decorativos y mucho más.
+								</p>
+								<p>
+									Cada pieza que ofrecemos está pensada para sumar calidez y estilo a tu hogar. Porque en
+									Espejisimo creemos que los detalles hacen la diferencia.
+								</p>
+							  </div>
+							</div>
+						</div>
+						  
+					</article>
+				</section>
+			</div>
+		</div>
+		<!-- Modal del carrito -->
+		<div id="cart-modal" class="cart-modal">
+			<div class="cart-modal-content">
+			  <span class="cerrar-carrito" onclick="cerrarCarrito()">✖️</span>
+			  <h2>Tu carrito</h2>
+			  <div id="cart-items"></div>
+			  <p id="total-price">Total: $0</p>
+			  <div class="cart-buttons">
+				<button class="pagar-btn" onclick="finalizarCompra()">Pagar</button>
+			  </div>
+			</div>
+		</div>
+
+		<!-- Botón de lector de texto -->
+		<div class="lector-button" onclick="leerTextoPagina()">
+			<img src="../../IMAGENES/tts.png" alt="Lector" />
+		</div>
+		<!-- Boton para chatbox-->
+		<div class="chatbot-button" onclick="toggleChatbox()">
+			<img src="../../IMAGENES/bot.png" alt="Chat">
+		</div>
+		  
+		<div class="chatbox" id="chatbox">
+			<div class="chatbox-header">
+			  <img src="../../IMAGENES/boticon.png" alt="Bot">
+			  <span>ChatBot</span>
+			  <div class="close-chat" onclick="toggleChatbox()">✖</div>
+			</div>
+		
+			<div class="chatbox-messages" id="chatbox-messages"></div>
+		  
+			<div class="chatbox-options" id="chatbox-buttons"></div>
+		</div>
+		<!-- Botón de WhatsApp -->
+		<a href="https://wa.me/59160883366?text=¡Hola!%20Estoy%20interesado%20en%20sus%20productos." class="boton-whatsapp" target="_blank">
+			<img src="../../IMAGENES/whats.png" alt="WhatsApp" style="width: 40px;">
+		</a>
+
+		<footer>
+    		<p>&copy; 2025 Espejisimo. Todos los derechos reservados.</p>
+    		<p>📍 Ubicación: Santa Cruz de la Sierra, Bolivia</p>
+    		<p>📞 Tel: <a id="wsplink" href="https://wa.me/message/LP3YDWZJ7E2IF1">+591 60883366</a> | ✉️ espejisimo@gmail.com</p>
+ 		</footer>
+   
+	</body>
+</html>

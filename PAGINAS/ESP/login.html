@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Iniciar Sesion</title>
+        <script src="../../JAVASCRIPS/script1.js"></script>
+        <link rel="stylesheet" href="../../ESTILO/login.css">
+    </head>
+    <body> 
+      <div class="container">
+        <div class="card">
+          <img src="../../IMAGENES/LOGIN/logo.png" alt="Logo de la empresa" class="logo">
+          <h2>Inicio de Sesion</h2>
+          <form onsubmit="ingresar(event)">
+            <input type="text" id="usuario" name="username" placeholder="Usuario" required>
+            <input type="password" id="clave" name="password" placeholder="Clave" required>
+            <button type="submit">Ingresar</button>
+          </form>
+          <center><a href="#" onclick="crearCuenta()">¿No tienes cuenta? Create una aquí</a></center>
+          <br>
+          <center><a href="../../index.html">Ingresar a la pagina sin iniciar sesion</a></center>
+        </div>
+      </div>
+      <!-- Modal para crear cuenta -->
+      <div id="crearCuentaModal" class="modal">
+        <div class="modal-content">
+          <span class="cerrar-modal" onclick="cerrarModalCrearCuenta()">✖️</span>
+          <h2>Crear nueva cuenta</h2>
+          <form id="formCrearCuenta" onsubmit="guardarCuentaTemporal(event)">
+            <input type="text" id="nuevoUsuario" placeholder="Nuevo Usuario" required>
+            <input type="password" id="nuevaClave" placeholder="Nueva Clave" required>
+            <button type="submit">Crear Cuenta</button>
+          </form>
+        </div>
+      </div>
+    </body>
+</html>
