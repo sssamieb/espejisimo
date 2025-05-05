@@ -367,7 +367,7 @@ function ajustarPaddingLogin() {
 	if (!nombreUsuario) {
     const links = document.querySelectorAll('a');
     links.forEach(link => {
-        if (link.getAttribute('href')?.includes('ofertas.html')) {
+        if (link.getAttribute('href')?.includes('ofertasi.html')) {
             const li = link.closest('li');
             if (li) li.style.display = 'none';
         }
