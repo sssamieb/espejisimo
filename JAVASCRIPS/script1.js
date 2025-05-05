@@ -1072,14 +1072,14 @@ const preguntasIniciales = [
     siguientes: [
       { texto: "¿Atienden en feriados?", respuesta: "Solo con citas previas." },
       { texto: "¿Hay atención fuera del horario?", respuesta: "Solo con citas previas." },
-      { texto: "¿Cómo agendo una cita?", respuesta: "Mediante WhatsApp, <a href='https://wa.me/59160883366?text=¡Hola!%20Quiero%20agendar%20una%20cita%20de%20visita%20a%20su%20tienda.'>Click Aquí para escribirnos</a>." }
+      { texto: "¿Cómo agendo una cita?", respuesta: "Mediante WhatsApp, <a href='https://wa.me/59160883366?text=¡Hola!%20Quiero%20agendar%20una%20cita%20de%20visita%20a%20su%20tienda.' target='_blank'>Click Aquí para escribirnos</a>." }
     ]
   },
   {
     texto: "¿Hacen envíos?",
     respuesta: "Sí, hacemos envíos a todo el país.",
     siguientes: [
-      { texto: "¿Cuánto es el costo del delivery?", respuesta: "El costo del envío depende de la distancia entre la tienda y su domicilio. <a href='https://wa.me/59160883366?text=¡Hola!%20Quiero%20cotizar%20el%20costo%20del%20envío%20a%20mi%20domicilio.'>Click Aquí para consultar el costo</a>." },
+      { texto: "¿Cuánto es el costo del delivery?", respuesta: "El costo del envío depende de la distancia entre la tienda y su domicilio. <a href='https://wa.me/59160883366?text=¡Hola!%20Quiero%20cotizar%20el%20costo%20del%20envío%20a%20mi%20domicilio.' target='_blank'>Click Aquí para consultar el costo</a>." },
       { texto: "¿Hacen envíos a todos los departamentos?", respuesta: "Sí, a los 9 departamentos." },
       { texto: "¿Cómo envían a otros departamentos?", respuesta: "Con el producto ya pagado, nosotros lo envíamos mediante la transportadora de preferencia del cliente y el costo del envío corre por parte del comprador." }
     ]
@@ -1176,7 +1176,7 @@ function despedirUsuario() {
   const mensajes = document.getElementById("chatbox-messages");
   const botMsg = document.createElement("div");
   botMsg.className = "bot-message";
-  botMsg.innerHTML = "¡Gracias por chatear con nosotros! Si tenés más preguntas, <a href='https://wa.me/59160883366'>clickea aquí para hablarnos por WhatsApp</a>. ¡Hasta luego!";
+  botMsg.innerHTML = "¡Gracias por chatear con nosotros! Si tenés más preguntas, <a href='https://wa.me/59160883366' target='_blank'>clickea aquí para hablarnos por WhatsApp</a>. ¡Hasta luego!";
   mensajes.appendChild(botMsg);
   document.querySelector(".chatbox-options").innerHTML = "";
 }
