@@ -452,7 +452,7 @@ document.addEventListener("DOMContentLoaded", function () {
         precio: 1000,
         imagenCatalogo: "../../IMAGENES/PRODUCTOS/HORIZONTALES/MUEBLES/mesaa.jpg", // imagen horizontal
         imagenes: [ "../../IMAGENES/PRODUCTOS/VERTICALES/MUEBLES/mesaa.jpg", "../../IMAGENES/PRODUCTOS/VERTICALES/MUEBLES/mesaa2.jpg"],
-        descripcion: "Mesa de centro flotante espejada con tapa biselada. <br><br>Medidas:<br> • 60 cm de ancho. <br> • 90 cm de largo. <br> • 40 cm de largo. <br><br>Material: Melamina y vidrio espejo. <br><br> <a href='index.html#sede-central'>Click Aquí para probar este modelo con nuestra Realidad Aumentada.</a>"
+        descripcion: "Mesa de centro flotante espejada con tapa biselada. <br><br>Medidas:<br> • 60 cm de ancho. <br> • 90 cm de largo. <br> • 40 cm de largo. <br><br>Material: Melamina y vidrio espejo. <br><br> <a href='../../index.html#sede-central'>Click Aquí para probar este modelo con nuestra Realidad Aumentada.</a>"
       },
       {
         nombre: "Recibidor Espejado",
@@ -501,7 +501,7 @@ document.addEventListener("DOMContentLoaded", function () {
         precio: 500,
         imagenCatalogo: "../../IMAGENES/PRODUCTOS/HORIZONTALES/ESPEJOS/espejore.jpg", // imagen horizontal
         imagenes: [ "../../IMAGENES/PRODUCTOS/VERTICALES/ESPEJOS/espejore.jpg", "../../IMAGENES/PRODUCTOS/VERTICALES/ESPEJOS/espejore2.jpg"],
-        descripcion: "Espejo de vidrio pulido de 3mm de grosor. <br><br> Medidas: <br> 90 cm de diametro. <br><br>Materiales: Melamina y vidrio espejo. <br><br> <a href='index.html#sede-central'>Click Aquí para probar este modelo con nuestra Realidad Aumentada.</a>"
+        descripcion: "Espejo de vidrio pulido de 3mm de grosor. <br><br> Medidas: <br> 90 cm de diametro. <br><br>Materiales: Melamina y vidrio espejo. <br><br> <a href='../../index.html#sede-central'>Click Aquí para probar este modelo con nuestra Realidad Aumentada.</a>"
       },
       {
         nombre: "Espejo Dorado Ventana / Tic Tac Toe",
