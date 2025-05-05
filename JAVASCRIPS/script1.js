@@ -363,24 +363,18 @@ function ajustarPaddingLogin() {
 		ajustarPaddingLogin();
 	}
 
-document.addEventListener("DOMContentLoaded", () => {
-    const nombreUsuario = localStorage.getItem("usuario");
-    if (!nombreUsuario) {
-        document.querySelectorAll('a').forEach(link => {
-            const href = link.getAttribute('href');
-            if (href && href.includes('ofertas.html')) {
-                const li = link.closest('li');
-                if (li) {
-                    li.style.display = 'none';
-                } else {
-                    link.style.display = 'none';
-                }
-            }
-        });
-    }
+// oculta el enlace de ofertas si no hay sesión
+	if (!nombreUsuario) {
+    const links = document.querySelectorAll('a');
+    links.forEach(link => {
+        if (link.getAttribute('href')?.includes('ofertas.html')) {
+            const li = link.closest('li');
+            if (li) li.style.display = 'none';
+        }
+    });
+}
+
 });
-
-
 
   
 //catalogo
