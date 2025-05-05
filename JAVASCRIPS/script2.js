@@ -1072,14 +1072,14 @@ const preguntasIniciales = [
     siguientes: [
       { texto: "Do you work on holidays?", respuesta: "Only by appointment." },
       { texto: "Do you provide service outside of working hours?", respuesta: "Only by appointment." },
-      { texto: "How can I schedule an appointment?", respuesta: "Through WhatsApp, <a href='https://wa.me/59160883366?text=Hello!%20I%20want%20to%20schedule%20an%20appointment%20to%20visit%20your%20store.'>Click here to message us</a>." }
+      { texto: "How can I schedule an appointment?", respuesta: "Through WhatsApp, <a href='https://wa.me/59160883366?text=Hello!%20I%20want%20to%20schedule%20an%20appointment%20to%20visit%20your%20store.' target='_blank'>Click here to message us</a>." }
     ]
   },
   {
     texto: "Do you offer delivery?",
     respuesta: "Yes, we deliver nationwide.",
     siguientes: [
-      { texto: "What is the delivery cost?", respuesta: "The shipping cost depends on the distance between the store and your address. <a href='https://wa.me/59160883366?text=Hello!%20I%20want%20to%20quote%20the%20cost%20of%20delivery%20to%20my%20address.'>Click here to inquire about the cost</a>." },
+      { texto: "What is the delivery cost?", respuesta: "The shipping cost depends on the distance between the store and your address. <a href='https://wa.me/59160883366?text=Hello!%20I%20want%20to%20quote%20the%20cost%20of%20delivery%20to%20my%20address.' target='_blank'>Click here to inquire about the cost</a>." },
       { texto: "Do you deliver to all departments?", respuesta: "Yes, to all 9 departments." },
       { texto: "How do you send products to other departments?", respuesta: "Once the product is paid for, we send it via the customer's preferred carrier, and the shipping cost is covered by the buyer." }
     ]
@@ -1176,7 +1176,7 @@ function despedirUsuario() {
   const mensajes = document.getElementById("chatbox-messages");
   const botMsg = document.createElement("div");
   botMsg.className = "bot-message";
-  botMsg.innerHTML = "Thank you for chatting with us! If you have more questions, <a href='https://wa.me/59160883366'>click here to message us on WhatsApp</a>. See you later!";
+  botMsg.innerHTML = "Thank you for chatting with us! If you have more questions, <a href='https://wa.me/59160883366' target='_blank'>click here to message us on WhatsApp</a>. See you later!";
   mensajes.appendChild(botMsg);
   document.querySelector(".chatbox-options").innerHTML = "";
 }
