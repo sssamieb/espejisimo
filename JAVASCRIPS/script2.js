@@ -365,13 +365,15 @@ function ajustarPaddingLogin() {
 
 	// oculta el enlace de ofertas si no hay sesión
 	if (!nombreUsuario) {
-		const ofertasLink = document.querySelector('a[href="ofertasi.html"]');
-        if (ofertasLink) {
-	       const li = ofertasLink.closest('li');
-	    if (li) li.style.display = 'none';
+    const links = document.querySelectorAll('a');
+    links.forEach(link => {
+        if (link.getAttribute('href')?.includes('ofertas.html')) {
+            const li = link.closest('li');
+            if (li) li.style.display = 'none';
         }
+    });
+}
 
-	}
 });
 
 
