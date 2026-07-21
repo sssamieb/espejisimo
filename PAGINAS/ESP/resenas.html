@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espejisimo - Reseñas</title>
+    <!-- Font Awesome para íconos vectoriales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../ESTILO/resenas.css">
+    <link rel="icon" type="image/png" href="../../IMAGENES/boticon.png">
+    <script src="../../JAVASCRIPS/script1.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="../../index.html" class="logo">
+            <img src="../../IMAGENES/INDEX/HEADER/logo.png" alt="Logo de la empresa">
+        </a>
+
+        <!-- Contenedor compacto de acciones a la derecha -->
+        <div class="header-actions">
+            <a href="/PAGINAS/ESP/login.html" class="login" id="logoutBtn">
+                <img src="../../IMAGENES/INDEX/HEADER/login.png" alt="login">
+                <span id="usuarioNombre"></span>
+            </a>
+            
+            <div class="cart-icon" onclick="abrirCarrito()">
+                <img src="../../IMAGENES/INDEX/HEADER/carrito.png" alt="Carrito de compras">
+            </div>
+
+            <!-- Botón del menú hamburguesa -->
+            <label class="menu-toggle" for="menu-checkbox" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+    </header>
+
+    <!-- Checkbox invisible para toggle de menú en móvil -->
+    <input type="checkbox" id="menu-checkbox">
+
+    <nav id="menu">
+        <ul>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="ofertas.html">Ofertas</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="resenas.html">Reseñas</a></li>
+            <li><a href="faq.html">Preguntas Frecuentes</a></li>
+            <li><a href="manual.html">Manual</a></li>
+        </ul>
+    </nav>
+
+    <main class="reviews-container">
+        <h2>Reseñas de Productos</h2>
+
+        <!-- Formulario para reseñas (solo visible si está logueado) -->
+        <div id="review-form-container" class="review-form" style="display: none;">
+            <h3>Escribe tu reseña</h3>
+            
+            <input type="text" id="product-name" placeholder="Nombre del producto" required>
+            
+            <div class="rating-container">
+                <label>Tu puntuación:</label>
+                <div class="rate" id="rating-stars">
+                    <input type="radio" id="star5" name="rate" value="5" />
+                    <label for="star5" title="5 estrellas">5 stars</label>
+                    <input type="radio" id="star4" name="rate" value="4" />
+                    <label for="star4" title="4 estrellas">4 stars</label>
+                    <input type="radio" id="star3" name="rate" value="3" />
+                    <label for="star3" title="3 estrellas">3 stars</label>
+                    <input type="radio" id="star2" name="rate" value="2" />
+                    <label for="star2" title="2 estrellas">2 stars</label>
+                    <input type="radio" id="star1" name="rate" value="1" />
+                    <label for="star1" title="1 estrella">1 star</label>
+                </div>
+            </div>
+            
+            <textarea id="comment" placeholder="Tu comentario" required></textarea>
+            
+            <div style="text-align: center;">
+                <button onclick="submitReview()">Enviar</button>
+            </div>
+        </div>
+        
+        <!-- Lista dinámica de reseñas -->
+        <div id="reviews-list" class="reviews-list"></div>
+    </main>
+
+    <!-- Modal del carrito -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-modal-content">
+            <span class="cerrar-carrito" onclick="cerrarCarrito()"><i class="fa-solid fa-xmark"></i></span>
+            <h2>Tu carrito</h2>
+            <div id="cart-items"></div>
+            <p id="total-price">Total: $0</p>
+            <div class="cart-buttons">
+                <button class="pagar-btn" onclick="finalizarCompra()">Pagar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón lector TTS -->
+    <div class="lector-button" onclick="leerTextoPagina()" title="Leer texto">
+        <img src="../../IMAGENES/tts.png" alt="Lector" />
+    </div>
+
+    <!-- Botón y ventana Chatbot -->
+    <div class="chatbot-button" onclick="toggleChatbox()" title="Abrir Chat">
+        <img src="../../IMAGENES/bot.png" alt="Chat">
+    </div>
+      
+    <div class="chatbox" id="chatbox">
+        <div class="chatbox-header">
+            <img src="../../IMAGENES/boticon.png" alt="Bot">
+            <span>ChatBot</span>
+            <div class="close-chat" onclick="toggleChatbox()"><i class="fa-solid fa-xmark"></i></div>
+        </div>
+        <div class="chatbox-messages" id="chatbox-messages"></div>
+        <div class="chatbox-options" id="chatbox-buttons"></div>
+    </div>
+
+    <!-- Botón de WhatsApp -->
+    <a href="https://wa.me/59160883366?text=¡Hola!%20Estoy%20interesado%20en%20sus%20productos." class="boton-whatsapp" target="_blank" aria-label="WhatsApp">
+        <img src="../../IMAGENES/whats.png" alt="WhatsApp">
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Espejisimo. Todos los derechos reservados.</p>
+        <p><i class="fa-solid fa-location-dot"></i> Ubicación: Santa Cruz de la Sierra, Bolivia</p>
+        <p>
+            <i class="fa-solid fa-phone"></i> Tel: 
+            <a id="wsplink" href="https://wa.me/message/LP3YDWZJ7E2IF1" target="_blank">+591 60883366</a> 
+            | <i class="fa-solid fa-envelope"></i> espejisimo.sc@gmail.com
+        </p>
+    </footer>
+</body>
+</html>

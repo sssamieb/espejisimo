@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión</title>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <script src="../../JAVASCRIPS/script1.js"></script>
+  <link rel="stylesheet" href="../../ESTILO/login.css">
+  <link rel="icon" type="image/png" href="../../IMAGENES/boticon.png">
+</head>
+<body> 
+  <div class="container">
+    <div class="card">
+      <img src="../../IMAGENES/LOGIN/logo.png" alt="Logo de la empresa" class="logo">
+      <h2>Inicio de Sesión</h2>
+      <form onsubmit="ingresar(event)">
+        <input type="text" id="usuario" name="username" placeholder="Usuario" required>
+        <input type="password" id="clave" name="password" placeholder="Clave" required>
+        <button type="submit">Ingresar</button>
+      </form>
+      
+      <div class="card-links">
+        <a href="#" onclick="crearCuenta()">¿No tienes cuenta? Créate una aquí</a>
+        <a href="../../index.html">Ingresar a la página sin iniciar sesión</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal para crear cuenta -->
+  <div id="crearCuentaModal" class="modal">
+    <div class="modal-content">
+      <!-- Ícono de Font Awesome (fa-xmark / fa-times) -->
+      <span class="cerrar-modal" onclick="cerrarModalCrearCuenta()">
+        <i class="fa-solid fa-xmark"></i>
+      </span>
+      <h2>Crear nueva cuenta</h2>
+      <form id="formCrearCuenta" onsubmit="guardarCuentaTemporal(event)">
+        <input type="text" id="nuevoUsuario" placeholder="Nuevo Usuario" required>
+        <input type="password" id="nuevaClave" placeholder="Nueva Clave" required>
+        <button type="submit">Crear Cuenta</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

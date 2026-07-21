@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espejisimo - Manual de Usuario</title>
+    <!-- Font Awesome para íconos vectoriales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../ESTILO/manual.css">
+    <link rel="icon" type="image/png" href="../../IMAGENES/boticon.png">
+    <script src="../../JAVASCRIPS/script1.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="../../index.html" class="logo">
+            <img src="../../IMAGENES/INDEX/HEADER/logo.png" alt="Logo de la empresa">
+        </a>
+
+        <!-- Contenedor compacto de acciones a la derecha -->
+        <div class="header-actions">
+            <a href="/PAGINAS/ESP/login.html" class="login" id="logoutBtn">
+                <img src="../../IMAGENES/INDEX/HEADER/login.png" alt="login">
+                <span id="usuarioNombre"></span>
+            </a>
+            
+            <div class="cart-icon" onclick="abrirCarrito()">
+                <img src="../../IMAGENES/INDEX/HEADER/carrito.png" alt="Carrito de compras">
+            </div>
+
+
+            <!-- Botón del menú hamburguesa -->
+            <label class="menu-toggle" for="menu-checkbox" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+    </header>
+
+    <!-- Checkbox invisible para toggle de menú en móvil -->
+    <input type="checkbox" id="menu-checkbox">
+
+    <nav id="menu">
+        <ul>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="ofertas.html">Ofertas</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="resenas.html">Reseñas</a></li>
+            <li><a href="faq.html">Preguntas Frecuentes</a></li>
+            <li><a href="manual.html">Manual</a></li>
+        </ul>
+    </nav>
+
+    <main class="manual-wrapper">
+        <h1 class="manual-title">Manual de Uso del Sitio</h1>
+
+        <div class="manual-item">
+            <div class="manual-image">
+                <img src="../../IMAGENES/MANUAL/index.PNG" alt="Captura Inicio">
+            </div>
+            <div class="manual-info">
+                <h2>INICIO / INDEX</h2>
+                <p>Esta es nuestra página principal. Aquí encontrarás nuestros productos destacados, nuestra ubicación, enlaces a redes sociales y la oportunidad de experimentar la realidad aumentada con nuestras colecciones.</p>
+                <a href="../../index.html" class="manual-btn"><i class="fa-solid fa-arrow-right"></i> Ir a la Página Principal</a>
+            </div>
+        </div>
+
+        <div class="manual-item reverse">
+            <div class="manual-image">
+                <img src="../../IMAGENES/MANUAL/login.PNG" alt="Captura Iniciar Sesión">
+            </div>
+            <div class="manual-info">
+                <h2>INICIA SESIÓN</h2>
+                <p>¿Quieres acceder a nuestras ofertas exclusivas? En esta sección puedes iniciar sesión o registrar una nueva cuenta para guardar productos en tu carrito y acceder a promociones especiales.</p>
+                <a href="login.html" class="manual-btn"><i class="fa-solid fa-arrow-right"></i> Iniciar Sesión</a>
+            </div>
+        </div>
+
+        <div class="manual-item">
+            <div class="manual-image">
+                <img src="../../IMAGENES/MANUAL/catalogo.PNG" alt="Captura Catálogo">
+            </div>
+            <div class="manual-info">
+                <h2>CATÁLOGO</h2>
+                <p>Explora todo nuestro catálogo de productos espejados. Filtra por categorías, revisa especificaciones y añade tus favoritos directamente al carrito de compras.</p>
+                <a href="catalogo.html" class="manual-btn"><i class="fa-solid fa-arrow-right"></i> Ir al Catálogo</a>
+            </div>
+        </div>
+
+        <div class="manual-item reverse">
+            <div class="manual-image">
+                <img src="../../IMAGENES/MANUAL/nosotros.PNG" alt="Captura Nosotros">
+            </div>
+            <div class="manual-info">
+                <h2>NOSOTROS</h2>
+                <p>Conoce la historia detrás de Espejisimo, nuestros valores, nuestra visión y la dedicación que ponemos en cada uno de nuestros diseños importados.</p>
+                <a href="nosotros.html" class="manual-btn"><i class="fa-solid fa-arrow-right"></i> Ir a Nosotros</a>
+            </div>
+        </div>
+
+        <div class="manual-item">
+            <div class="manual-image">
+                <img src="../../IMAGENES/MANUAL/resenas.PNG" alt="Captura Reseñas">
+            </div>
+            <div class="manual-info">
+                <h2>RESEÑAS</h2>
+                <p>Descubre las opiniones de nuestros clientes satisfechos. Si ya tienes una cuenta y realizaste una compra, ¡no dudes en compartir tu opinión con la comunidad!</p>
+                <a href="resenas.html" class="manual-btn"><i class="fa-solid fa-arrow-right"></i> Ir a Reseñas</a>
+            </div>
+        </div>
+
+        <div class="manual-item reverse">
+            <div class="manual-image">
+                <img src="../../IMAGENES/MANUAL/preguntas.PNG" alt="Captura Preguntas Frecuentes">
+            </div>
+            <div class="manual-info">
+                <h2>PREGUNTAS FRECUENTES</h2>
+                <p>¿Tienes dudas sobre envíos, garantías o materiales? Consulta nuestro apartado de Preguntas Frecuentes para resolver rápidamente cualquier inquietud.</p>
+                <a href="faq.html" class="manual-btn"><i class="fa-solid fa-arrow-right"></i> Ir a FAQ</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal del carrito -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-modal-content">
+            <span class="cerrar-carrito" onclick="cerrarCarrito()"><i class="fa-solid fa-xmark"></i></span>
+            <h2>Tu carrito</h2>
+            <div id="cart-items"></div>
+            <p id="total-price">Total: $0</p>
+            <div class="cart-buttons">
+                <button class="pagar-btn" onclick="finalizarCompra()">Pagar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón lector TTS -->
+    <div class="lector-button" onclick="leerTextoPagina()" title="Leer texto">
+        <img src="../../IMAGENES/tts.png" alt="Lector" />
+    </div>
+
+    <!-- Botón y ventana Chatbot -->
+    <div class="chatbot-button" onclick="toggleChatbox()" title="Abrir Chat">
+        <img src="../../IMAGENES/bot.png" alt="Chat">
+    </div>
+      
+    <div class="chatbox" id="chatbox">
+        <div class="chatbox-header">
+            <img src="../../IMAGENES/boticon.png" alt="Bot">
+            <span>ChatBot</span>
+            <div class="close-chat" onclick="toggleChatbox()"><i class="fa-solid fa-xmark"></i></div>
+        </div>
+        <div class="chatbox-messages" id="chatbox-messages"></div>
+        <div class="chatbox-options" id="chatbox-buttons"></div>
+    </div>
+
+    <!-- Botón de WhatsApp -->
+    <a href="https://wa.me/59160883366?text=¡Hola!%20Estoy%20interesado%20en%20sus%20productos." class="boton-whatsapp" target="_blank" aria-label="WhatsApp">
+        <img src="../../IMAGENES/whats.png" alt="WhatsApp">
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Espejisimo. Todos los derechos reservados.</p>
+        <p><i class="fa-solid fa-location-dot"></i> Ubicación: Santa Cruz de la Sierra, Bolivia</p>
+        <p>
+            <i class="fa-solid fa-phone"></i> Tel: 
+            <a id="wsplink" href="https://wa.me/message/LP3YDWZJ7E2IF1" target="_blank">+591 60883366</a> 
+            | <i class="fa-solid fa-envelope"></i> espejisimo.sc@gmail.com
+        </p>
+    </footer>
+</body>
+</html>
